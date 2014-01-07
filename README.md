@@ -27,7 +27,7 @@ held in [varnalab](http://varnalab.org) during 01.2014.
 ### schedule
 
 #### седмица 1
-* practice 1/ project setup 
+* [practice 1/ project setup](http://slid.es/outbounder/node-socialpower-class-1)
   * git
   * nvm
   * nodejs
