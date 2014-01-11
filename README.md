@@ -33,7 +33,7 @@ held in [varnalab](http://varnalab.org) during 01.2014.
   * nodejs
   * npm
   * team up
-* practice 2/ api development
+* [practice 2/ api development](http://slid.es/outbounder/node-socialpower-class-2)
   * project api implementation
   * testing
   * documentation
