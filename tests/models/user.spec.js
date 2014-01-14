@@ -17,4 +17,20 @@ describe("User model", function(){
       })
     })
   })
+
+  it("sendMessage", function(next){
+    User.create({
+      "username": "test",
+      "password": "123"
+    }, function(err, user){
+      user.sendMessage({body:'some text'},function(res){
+        console.log(res);
+        next();
+      });
+    })
+  })
+
+   
+
+
 })

@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
 var crypto = require("crypto");
+var Message = require("./Message");
 
 var User = new mongoose.Schema({
   username: { type: String, unique: true, required: true },
@@ -37,7 +38,26 @@ User.static("findOneByUsernamePassword", function(username, password, callback) 
 
 User.method("sendMessage", function(message, callback){
   // ToDo
-  
+
+  Message.findOne(message, function(err, msg){
+    if (err) callback(err);
+    else{
+      if(msg){       
+        callback('this msg already exist');
+      }else{
+        // save msg
+        msg = new Message(message)
+        msg.save(function(err){
+          if(err){           
+            callback('msg cannot be saved');
+          }else{            
+            callback('OK');
+            //add points
+          }
+        });
+      } 
+    }
+  })
   // 1. check is message already stored in DB (has _id property)
   // 1.1 create the message if not stored yet
 
